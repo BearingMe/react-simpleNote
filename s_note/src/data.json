@@ -1,0 +1,32 @@
+[
+    {
+        "id": "0",
+        "title": "Primeiro teste",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ducimus excepturi quos magnam inventore natus, eos accusantium cupiditate dolore facere impedit recusandae reiciendis eius rem illum laborum culpa unde molestiae.",
+        "strike": false
+    },
+    {
+        "id": "1",
+        "title": "Segundo teste",
+        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, dolor modi? Sequi eaque, inventore distinctio doloribus rerum eligendi ipsam assumenda aliquam laudantium et id? Facere tempora nulla quisquam impedit corporis?",
+        "strike": true
+    },
+    {
+        "id": "2",
+        "title": "Terceiro teste",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, doloremque a maxime inventore voluptate soluta quas! Obcaecati esse beatae porro, eaque dolorum officia dolore, accusantium illum sunt, numquam iusto sapiente",
+        "strike": false
+    },
+    {
+        "id": "3",
+        "title": "Quarto teste",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, adipisci corporis? Culpa esse blanditiis qui, quae sunt perspiciatis voluptatem recusandae quidem quis id vel est facilis amet ullam debitis similique.",
+        "strike": false
+    },
+    {
+        "id": "4",
+        "title": "Quinto teste",
+        "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque quibusdam nihil voluptatem commodi magni soluta necessitatibus earum doloribus architecto! Ad explicabo aperiam eaque quae itaque perspiciatis in laboriosam nam nisi.",
+        "strike": false
+    }
+]
