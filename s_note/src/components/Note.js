@@ -21,7 +21,9 @@ function Note(props) {
 
       <section className="card-footer p-1">
         <article className="btn-group float-right">
-          <button className="btn text-white">
+          <button 
+            className="btn text-white"
+            onClick={() => props.click('edit', props.id)}>            
             <i className="fas fa-pencil-alt"></i>
           </button>
 

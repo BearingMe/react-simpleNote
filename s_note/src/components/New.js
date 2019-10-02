@@ -18,6 +18,11 @@ class New extends Component {
     this.setState({ [name]: value })
   }
 
+  componentDidMount() {
+    this.setState({title: this.props.post[0]})
+    this.setState({content: this.props.post[1]})
+  }
+
   render() {
     return (
       <div className="card shadow bg-dark mb-3">

@@ -12,6 +12,7 @@ class App extends Component {
     super()
     this.state = {
       showNewPost: false,
+      editablePost: ['', ''],
       data: data
     }
 
@@ -28,6 +29,7 @@ class App extends Component {
     }
 
     this.setState(callback)
+    this.setState({ editablePost: ['', ''] })
   }
 
   // add new post
@@ -40,7 +42,10 @@ class App extends Component {
     }
 
     let callback = (before) => {
-      return { data: before.data.push(element) }
+      let newData = this.state.data.slice()
+      newData.push(element)
+
+      return { data: newData }
     }
 
     this.setState(callback)
@@ -50,10 +55,12 @@ class App extends Component {
   // handle all buttons from notes
   noteClick(method, id) {
     let newData
+    let pointer
 
     switch (method) {
       case 'delete':
-        newData = this.state.data.filter((elem) => { return (elem.id !== id) })
+        newData = this.state.data.filter(elem => elem.id !== id)
+        pointer = 'data'
         break;
 
       case 'strike':
@@ -61,14 +68,25 @@ class App extends Component {
           if (elem.id === id) elem.strike = !elem.strike
           return (elem)
         }
+        
         newData = this.state.data.map(callback)
+        pointer = 'data'  
+        break;
+
+      case 'edit':
+        newData = this.state.data
+          .filter(elem => elem.id === id)
+          .map(elem => [elem.title, elem.content])[0]
+        pointer = 'editablePost'
+
+        this.showClick()
         break;
 
       default:
         break;
     }
 
-    this.setState({ data: newData })
+    this.setState({ [pointer]: newData })
   }
 
 
@@ -102,6 +120,7 @@ class App extends Component {
               <New
                 submit={this.submitClick}
                 click={this.showClick}
+                post={this.state.editablePost}
               /> :
               Notas
           }
@@ -112,4 +131,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
