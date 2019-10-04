@@ -1,2 +1,2 @@
 # LearningReact
-Small progressive web apps for personal use.
+Small progressive web app for personal use.
